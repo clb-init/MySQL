@@ -1,0 +1,67 @@
+
+
+<style>
+   @layer {
+      * {
+         scrollbar-color: #f20ed9 #202324;
+      }
+   }
+
+   code {
+      /* white-space: pre; 
+      text-wrap-mode: nowrap;
+      white-space-collapse: preserve; */
+      text-wrap-mode: wrap;
+      white-space-collapse: preserve-spaces;
+      
+      display: block; 
+      font-family: monospace; 
+      margin: 1em 0;
+   }
+</style>
+
+<h2>Creating new schemas</h2>
+<code sql="">
+CREATE SCHEMA `EA_teste` DEFAULT CHARACTER SET utf8 ;
+</code>
+
+<h2>Creating new tables</h2>
+<code sql="">
+   CREATE TABLE `EA_teste`.`Clients` (
+   <br>     `id` INT(11) NOT NULL AUTO_INCREMENT,
+   <br>     `Name` VARCHAR(55) NOT NULL,
+   <br>     `Age` INT NOT NULL,
+   <br>     `Email` VARCHAR(45) NOT NULL,
+   <br>     `Phone` VARCHAR(12) NOT NULL,
+   <br>     `Cellphone` VARCHAR(12) NOT NULL,
+   <br>     `Address` VARCHAR(65) NOT NULL,
+   <br>     PRIMARY KEY (`id`),
+   <br>     UNIQUE INDEX `Clients_UNIQUE` (`id` ASC) VISIBLE);
+    
+</code>
+
+<h2>Show all from table"Clients" of schema"EA_teste"</h2>
+<code sql="">
+   SELECT * FROM EA_teste.Clients;
+</code>
+
+<h2>Insert values into a table</h2>
+<code sql="">
+   INSERT INTO `EA_teste`.`Clients` (
+   <br>        `id`, 
+   <br>        `Name`, 
+   <br>        `Age`, 
+   <br>        `Email`, 
+   <br>        `Phone`, 
+   <br>        `Cellphone`, 
+   <br>        `Address`
+   <br>     ) VALUES (
+   <br>        '1', 
+   <br>        'Rafael Angelo Sammarco', 
+   <br>        '34', 
+   <br>        'rafa.hemp@hotmail.com', 
+   <br>        '13919999999', 
+   <br>        '13991999999', 
+   <br>        'Rua do DNA'
+   <br>     );
+</code>
