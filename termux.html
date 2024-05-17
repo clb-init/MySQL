@@ -1,5 +1,18 @@
 
 
+install:
+
+start server:
+mysqld_safe -u root &
+
+start client:
+mysql -u root -p 
+
+setpass: 
+alter user root@localhost identified by "senha" > setpass.sql
+mysql mysql < setpass.sql > mysqllogs.log
+
+
 https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DRZKuQ5Cy4tw&ved=2ahUKEwjz-P-wzZOGAxXNpZUCHYnrC9kQz40FegQIDhAz&usg=AOvVaw1005JtXQdFgGL0ERPLsloI
 
 pkg install mariadb
