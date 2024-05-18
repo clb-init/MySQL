@@ -1,0 +1,21 @@
+
+
+<link rel="stylesheet" href="./assets/css/globals.css">
+
+mysql data dir 
+MariaDB/MySQL system tables in "~/../usr/var/lib/mysql"
+
+start mariadbd at boot time:
+copy support-files/mariadb.service 
+
+set pass for the MariaDB root user:
+start the server, then issue - 
+../usr/bin/mariadb-secure-installation 
+
+https://mariadb.com/kb
+
+
+steps 
+pkgi mariadb 
+mysql_install_db 
+mariadb-safe -u root & 

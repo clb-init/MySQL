@@ -1,5 +1,69 @@
 
 
+start the server::
+user/bin/mariadb-secure-installation
+
+start mariadb daemon::
+usr/bin/mariadbd-safe --datadir="/data/data/com.termux/files/usr/var/lib/mysql"
+
+start server:
+mysqld_safe &
+
+login to server:
+mysql -u root 
+
+create database databaseName;
+
+show databases;
+
+use databaseName;
+
+show tables;
+
+use databaseName;
+create table tableName( id int, data varchar( 100 ) );
+insert into tableName( id, data ) values( 1, "data" );
+
+view data in a table: 
+select * from tableName;
+
+update data in a table: 
+update tableName set name = "data" where id = 1;
+
+delete data from a table: 
+delete from tableName where id = 1;
+
+create a new user and grant privileges: 
+grant all on databaseName.* to "userName"@"localhost" identified by "password";
+flush privileges;
+
+exit:
+exit
+
+
+
+
+<!-- ================================ -->
+pkg install mariadb
+
+mysql -u $(whoami)
+or
+mysql -u $(id -un)
+
+use mysql;
+set password for 'root'@'localhost' = password('YOUR_ROOT_PASSWORD_HERE');
+flush privileges;
+quit;
+
+login as root:
+mysql -u root -p
+
+start MySQL server:
+mysqld_safe
+
+
+
+<!-- ================================ -->
 install:
 
 start server:
@@ -12,7 +76,7 @@ setpass:
 alter user root@localhost identified by "senha" > setpass.sql
 mysql mysql < setpass.sql > mysqllogs.log
 
-
+<!-- ================================ -->
 https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DRZKuQ5Cy4tw&ved=2ahUKEwjz-P-wzZOGAxXNpZUCHYnrC9kQz40FegQIDhAz&usg=AOvVaw1005JtXQdFgGL0ERPLsloI
 
 pkg install mariadb
