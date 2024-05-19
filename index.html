@@ -1,21 +1,56 @@
 
 
-<basic-terms section>
-   <h2>Basic Terms</h2>
-   <hr />
-   <h3>
-      Whats is table or relation in database?
-   </h3>
-   <ul>
-      <li>
-         A table is a collection or related data held in
-         a structure format whitin a base.
-      </li>
-      <li></li>
-   </ul>
-</basic-terms>
+<link rel="stylesheet" href="./assets/css/globals.css">
+<script src="./assets/scripts/globals.js" defer></script>
+<body>
+   <basic-terms section>
+      <h2>Basic Terms</h2>
+      <hr />
+      <h3>
+         Whats is table or relation in database?
+      </h3>
+      <ul>
+         <li>
+            A table is a collection or related data held in
+            a structure format whitin a base.
+         </li>
+         <li></li>
+      </ul>
+   </basic-terms>
+   
+   <sql-insert section bg="#212329">
+      <header>
+      </header>
+         <h2>insert</h2>
+      <page>
+         <p>
+            insert data into a table called "users"
+         </p>
+         <schema st></schema>
+         
+         <code sql>
+            insert into users( name, idade ) <br />
+            values <br />
+            ( "Nome 1", "20" ), <br />
+            ( "Nome 2", "25" ), <br />
+            ( "Nome 3", "30" );
+         </code>
+      </page>
+   </sql-insert>
+   
+   <sql-select section bg="">
+      <h2>select</h2>
+      <page>
+      <p>
+         fetches the data that is already recorded in 
+         the table
+      </p>
+      <schema st></schema>
+      </page>
+   </sql-select>
+   
+   fichas = registros 
+   pastas = tabelas 
+   armarios = arquivos 
 
-fichas = registros 
-pastas = tabelas 
-armarios = arquivos 
-
+</body>

@@ -3,11 +3,61 @@
 @layer {
    * {
       scrollbar-color: #f20ed9 #202324;
+      box-sizing: border-box;
    }
    
    html {
       color-scheme: dark;
    }
+   
+   body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      gap: 2vw;
+   }
+   
+   page {
+      display: flex;
+      flex-direction: column;
+      width: clamp( 100px, 90%, 750px );
+      margin: auto;
+   }
+   
+   [section] {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+@media ( prefers-color-scheme: dark ) {
+   :root {
+      background: #1b1d22;
+   }
+}
+
+[section] > header {
+   padding: .5em;
+}
+
+hr {
+   display: block;
+   width: 100%;
+}
+
+table {
+   width: 95%;
+   margin: auto;
+}
+
+th, caption {
+   background-color: #669;
+}
+thead, tr, td {
+   border: 0px solid #944;
+   margin: 0;
+   flex: 1;
+   background: #3e333a;
 }
 
 code {
@@ -18,6 +68,12 @@ code {
    white-space-collapse: preserve-spaces;
    
    display: block; 
-   font-family: monospace; 
-   margin: 1em 0;
+   font-family: arial; 
+   width: clamp( 100px, 90%, 550px );
+   margin: 1em auto;
+   padding: 1em;
+   border-radius: 9px;
+   border: #f44 1px solid;
+   background: #1c1816;
+   color: #999;
 }
