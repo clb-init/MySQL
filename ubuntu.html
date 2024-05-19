@@ -1,0 +1,21 @@
+
+
+https://www.redswitches.com/blog/uninstall-mysql/
+
+sudo service mysql stop
+sudo killall -KILL mysql mysqld_safe mysqld
+sudo apt remove mysql-client mysql-server -y
+
+After uninstalling the core MySQL package(s), 
+the next step is to remove residual data.
+
+backup:
+sudo mv /var/lib/mysql /var/lib/mysql_directory_backup
+
+sudo rm -rf /etc/apparmor.d/abstractions/mysql /etc/apparmor.d/cache/usr.sbin.mysqld /etc/mysql /var/lib/mysql /var/log/mysql* /var/log/upstart/mysql.log* /var/run/mysqld
+
+The last step is to remove the MySQL user and 
+delete the MySQL group if it exists on your system:
+sudo deluser --remove-home mysql
+sudo delgroup mysql
+
