@@ -42,13 +42,81 @@
    <sql-select section bg="">
       <h2>select</h2>
       <page>
-      <p>
-         fetches the data that is already recorded in 
-         the table
-      </p>
-      <schema st></schema>
+         <p>
+            fetches the data that is already recorded in 
+            the table
+         </p>
+         <schema st></schema>
+         
+         <p>select tye whole table</p>
+         <code sql>
+            select * from users;
+         </code>
+         
+         <p>select a specific column in a table</p>
+         <code sql>
+            select name from users; <br />
+            -- or <br />
+            select name, idade from users;
+         </code>
+         
+         <p></p>
+         <code sql>
+            select * from users where idade = 13; <br />
+            -- or <br />
+            select * from users where idade > 13 and genre = f;
+         </code>
+         
+         <p></p>
+         <code sql>
+            
+         </code>
+         
+         <p></p>
+         <code sql>
+            
+         </code>
+         
+         <p></p>
+         <code sql>
+            
+         </code>
       </page>
    </sql-select>
+   
+   <sql-update section>
+      <h2>update</h2>
+      
+      <page>
+         <p>
+            is used to change data that has already been
+            inserted in the table
+         </p>
+         <schema st></schema>
+         
+         <p></p>
+         <code sql>
+            update users set nome = "Pessoa 2" where id = 2;
+         </code>
+      </page>
+   </sql-update>
+   
+   <sql-alter section>
+      <h2>alter</h2>
+      <page>
+         <p>
+            used to alter created tables,
+            you can add or delete or rename a column,
+            
+         </p>
+         <schema st></schema>
+         
+         <p></p>
+         <code sql>
+            
+         </code>
+      </page>
+   </sql-alter>
 </body>
 
 
@@ -58,7 +126,14 @@ armarios = arquivos
 
 MySQL
    DDL Definição 
+      create, alter, drop
    DML Manipulação 
+      insert, select, update, drop
    DQL Solicitações 
    DCL Controle 
    DTL Transações 
+   
+CREATE TABLE CLIENTE (CODIGO INT, NOME CHAR, CPF CHAR);
+
+INSERT INTO CLIENTE (CODIGO, NOME, CPF) VALUES (1, "AIRTON S.","154.854.846-21"),(2, "JOAO C","664.844.646-24"),(3, "MARIA S.","194.747.966-34"),(4, "DANIEL","154.854.654-21"),(5, "PAULO C.","664.844.981-24");
+
