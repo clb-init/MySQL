@@ -2,6 +2,7 @@
 
 https://www.redswitches.com/blog/uninstall-mysql/
 
+sudo pkill mysqld
 sudo service mysql stop
 sudo killall -KILL mysql mysqld_safe mysqld
 sudo apt remove mysql-client mysql-server -y
@@ -19,3 +20,61 @@ delete the MySQL group if it exists on your system:
 sudo deluser --remove-home mysql
 sudo delgroup mysql
 
+
+sudo apt-get purge mysql\* libmysql\*
+
+
+---
+mysql-community-client depends on mysql-common
+
+mysql-client depends on mysql-community-client
+
+
+
+sudo dpkg --configure mysql-server-X.X
+
+sudo dpkg --configure mysql-server_8.4.0-1ubuntu22.04_amd64.deb
+---
+systemctl stop mysql.service
+sudo apt-get purge mysql*
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+dpkg --list|grep mysql >> list-to-0purge.txt 
+sudo apt purge ...
+
+----
+sudo apt -y purge mysql*
+sudo apt -y autoremove
+sudo rm -rf /etc/mysql
+sudo rm -rf /var/lib/mysql*
+sudo shutdown -r now
+
+sudo rm -rf /etc/mysql
+sudo rm -rf /var/lib/mysql*
+
+sudo apt -y install mysql-server
+
+mysql_secure_installation
+
+sudo apt -y install mysql-server
+
+
+----
+
+
+-----
+sudo apt-get remove --purge mysql-server
+sudo /etc/init.d/mysql stop
+sudo apt-get remove --purge mysql-common
+sudo rm -rf /var/lib/mysql
+
+sudo apt-get autoremove --purge
+sudo apt-get autoclean
+sudo apt-get clean
+
+sudo apt update
+sudo apt install mysql-server
+
+
+-----
