@@ -1,0 +1,52 @@
+
+
+<h2>Uninstall MySQL on Linux</h2>
+<ol lista1></ol>
+
+<script>
+   "use strict";
+   const 
+      _ = ( ...v ) => console.log( ...v )
+      ,
+      $ = v => document.querySelector( v )
+      ,
+      $$ = v => document.querySelectorAll( v )
+   ;
+
+   function UninstallMySQL( props ) {
+      const 
+         steps = [
+            "systemctl stop mysql"
+            ,
+            "systemctl kill mysql"
+            ,
+            "sudo apt remove --purge mysql\\* -y"
+            ,
+            "sudo find / -name mysql"
+            ,
+            "sudo rm -rf ..."
+            ,
+            "sudo apt install mysql mysql-server"
+            ,
+            "wget http://repo.mysql.com/mysql-apt-config_0.8.30-1_all.deb"
+            ,
+            "sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb"
+            ,
+            "sudo apt update"
+            ,
+            "sudo apt install mysql-server -y"
+         ]
+      ;
+
+      steps.forEach( step => {
+         _( step );
+         return( $( props.tag ).innerHTML += `
+            <li>
+               ${ step }
+            </li>
+         ` );
+      } );
+   }
+
+   UninstallMySQL( { tag: "ol[ lista1 ]" } );
+</script>
